@@ -6,6 +6,7 @@ javascript:(function(e,a,g,h,f,c,b,d){if(!(f=e.jQuery)||g>f.fn.jquery||h(f)){c=a
 	}
 	console.log(selection);
 	var array = [];
+	var replaced, swap, text;
 	array = selection.split(/[ ,.?;:"']+/);
 	console.log(array);
 
@@ -29,8 +30,7 @@ javascript:(function(e,a,g,h,f,c,b,d){if(!(f=e.jQuery)||g>f.fn.jquery||h(f)){c=a
 
 	function textReplace(set) {
 		console.log('entered textReplace function');
-		var replaced = false;
-		var swap;
+		replaced = false;
 		do {
 			word = Math.floor(Math.random() * set.length);
 		} while (set[word][1].length == 1);
@@ -51,7 +51,7 @@ javascript:(function(e,a,g,h,f,c,b,d){if(!(f=e.jQuery)||g>f.fn.jquery||h(f)){c=a
 		}
 
 		$('p').each(function() {
-			var text = $(this).text();
+			text = $(this).text();
 			$(this).text(text.replace(swap.replacing, swap.replaceWith));
 		});
 
