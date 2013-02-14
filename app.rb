@@ -20,7 +20,9 @@ post '/synonyms' do
 end
 
 get '/test' do
-	pp 'request received'
+
+	pp params['test']
+
 	data = ["hello","hi","hallo"]
 
 	JSONP data
