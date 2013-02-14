@@ -8,9 +8,14 @@ javascript:(function(e,a,g,h,f,c,b,d){if(!(f=e.jQuery)||g>f.fn.jquery||h(f)){c=a
 	console.log(array);
 
 	$.getJSON('http://localhost:4567/synonyms?callback=?', {text: array}, function(data) {
-		alert(data);
+		var set = [];
+		for (var i = 0; i < data.length; i++) {
+			set.push([0, data[i]]);
+		}
+		console.log(set);
 		console.log('maderequest');
 	});
+	
 	console.log('afterquest');
 
 });
