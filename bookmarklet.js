@@ -7,7 +7,7 @@ javascript:(function(e,a,g,h,f,c,b,d){if(!(f=e.jQuery)||g>f.fn.jquery||h(f)){c=a
 	array = selection.split(/[ ,.?;:"']+/);
 	console.log(array);
 
-	$.getJSON('http://localhost:4567/test?callback=?', {test: array}, function(data) {
+	$.getJSON('http://localhost:4567/synonyms?callback=?', {text: array}, function(data) {
 		alert(data);
 		console.log('maderequest');
 	});
